@@ -4,8 +4,8 @@ metadata:
  name: Vipul
  description: Demo React Application
  tags:
-   - react
-   - frontend
+   -react
+   -frontend
 spec:
  type: website
  lifecycle: experimental
