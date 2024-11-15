@@ -1,19 +1,59 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Vipul
-  description: Demo React Application
-  tags:
-    -react
-    -frontend
+ name: Vipul
+ description: Demo React Application
+ tags:
+   - react
+   - frontend
 spec:
-  type: website
-  lifecycle: experimental
-  owner: Vipul
-  system: frontend
-  providesApis: [example-grpc-api]
-  consumesApis: [default/backend-api]
-  dependsOn: 
-    - resource:frontend-database
-    - component:backend-api
-    - service:logging-service
+ type: website
+ lifecycle: experimental
+ owner: Vipul
+ system: frontend
+ providesApis:
+   - example-grpc-api
+ consumesApis:
+   - default/backend-api
+ dependsOn:
+   - resource:frontend-database
+   - component:backend-api
+   - service:logging-service
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+ name: backend-api
+ description: Backend API used by the frontend React application
+spec:
+ type: openapi
+ lifecycle: production
+ owner: Vipul
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+ name: frontend-database
+ description: Database resource for the frontend application
+spec:
+ type: database
+ lifecycle: production
+ owner: Vipul
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+ name: logging-service
+ description: Central logging service used across applications
+spec:
+ type: service
+ lifecycle: production
+ owner: Vipul
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+ name: frontend
+ description: System representing all frontend components
+spec:
+ owner: Vipul
