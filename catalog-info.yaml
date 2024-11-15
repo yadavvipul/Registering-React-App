@@ -8,3 +8,9 @@ spec:
   owner: Vipul
   system: frontend
   providesApis: [example-grpc-api]
+  consumesApis: 
+    - default/backend-api
+  dependsOn: 
+    - resource: frontend-database
+    - component: backend-api
+    - service: logging-service
