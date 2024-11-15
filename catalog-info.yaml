@@ -10,7 +10,7 @@ spec:
  type: website
  lifecycle: experimental
  owner: Vipul
- system: frontend
+ system: frontend-React
  providesApis:
    - example-grpc-api
  consumesApis:
