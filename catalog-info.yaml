@@ -11,6 +11,8 @@ spec:
  lifecycle: experimental
  owner: Vipul
  system: frontend-React
+ providesApis:
+   - example-grpc-api
 
  consumesApis:
    - default/backend-api
