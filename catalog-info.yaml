@@ -2,6 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Vipul
+  description: Demo React Application
+  tags:
+    -react
+    -frontend
 spec:
   type: website
   lifecycle: experimental
