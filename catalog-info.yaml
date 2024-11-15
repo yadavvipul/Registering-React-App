@@ -7,9 +7,9 @@ spec:
   lifecycle: experimental
   owner: Vipul
   system: frontend
-  consumesApis: 
-    - default/backend-api
+  providesApis: [example-grpc-api]
+  consumesApis: [default/backend-api]
   dependsOn: 
-    - resource: frontend-database
-    - component: backend-api
-    - service: logging-service
+    - resource:frontend-database
+    - component:backend-api
+    - service:logging-service
