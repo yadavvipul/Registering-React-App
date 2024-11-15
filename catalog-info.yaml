@@ -6,5 +6,5 @@ spec:
   type: website
   lifecycle: experimental
   owner: Vipul
-  system: test
+  system: frontend
   providesApis: [example-grpc-api]
