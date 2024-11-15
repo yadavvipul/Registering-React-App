@@ -6,7 +6,7 @@ spec:
   type: website
   lifecycle: experimental
   owner: Vipul
-  system: frontend-system
+  system: frontend
   providesApis: 
     -default/react-app-api
   consumesApis:
